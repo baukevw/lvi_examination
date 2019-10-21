@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project number:</b>
+  <%= @inspection.project_number %>
+</p>
+
+<p>
+  <b>Project name:</b>
+  <%= @inspection.project_name %>
+</p>
+
+<p>
+  <b>Inspection date:</b>
+  <%= @inspection.inspection_date %>
+</p>
+
+<p>
+  <b>Inspection address street:</b>
+  <%= @inspection.inspection_address_street %>
+</p>
+
+<p>
+  <b>Inspection address number:</b>
+  <%= @inspection.inspection_address_number %>
+</p>
+
+<p>
+  <b>Inspection address zipcode:</b>
+  <%= @inspection.inspection_address_zipcode %>
+</p>
+
+<p>
+  <b>Inspection address city:</b>
+  <%= @inspection.inspection_address_city %>
+</p>
+
+<p>
+  <b>Contact person name:</b>
+  <%= @inspection.contact_person_name %>
+</p>
+
+<p>
+  <b>Contact person phone:</b>
+  <%= @inspection.contact_person_phone %>
+</p>
+
+<p>
+  <b>Contact person email:</b>
+  <%= @inspection.contact_person_email %>
+</p>
+
+<p>
+  <b>Report compiler:</b>
+  <%= @inspection.report_compiler %>
+</p>
+
+<p>
+  <b>Release date:</b>
+  <%= @inspection.release_date %>
+</p>
+
+<p>
+  <b>Approved:</b>
+  <%= @inspection.approved %>
+</p>
+
+<p>
+  <b>Building image:</b>
+  <%= @inspection.building_image %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_inspection_path(@inspection.client, @inspection) %> |
+<%= link_to 'Back', client_inspections_path(@inspection.client) %>

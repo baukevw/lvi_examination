@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Klanten</h1>
+<div class="card">
+  <ul class="list-group list-group-flush">
+    <% @clients.each do |client| %>
+      <li class="list-group-item d-flex bd-highlight">
+        <div class="flex-grow-1 bd-highlight">
+          <h5 class="card-title mb-0"><%= client.name %></h5>
+          <small class="card-text">
+            <%= client.street %>
+            <%= client.number %>,
+            <%= client.zipcode %>,
+            <%= client.city %>
+          </small>
+        </div>
+        <div class="bd-highlight align-self-center">
+          <%= link_to 'Show', client, class: 'btn btn-sm btn-outline-primary' %>
+        </div>
+      </li>
+    <% end %>
+  </div>
+<br>
+
+<div class="float-right">
+  <%= link_to 'New Client', new_client_path, class: 'btn btn-primary' %>
+</div>
+

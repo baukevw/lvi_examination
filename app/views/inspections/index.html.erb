@@ -1,0 +1,49 @@
+<h1>Listing inspections</h1>
+
+<table>
+  <tr>
+    <th>Project number</th>
+    <th>Project name</th>
+    <th>Inspection date</th>
+    <th>Inspection address street</th>
+    <th>Inspection address number</th>
+    <th>Inspection address zipcode</th>
+    <th>Inspection address city</th>
+    <th>Contact person name</th>
+    <th>Contact person phone</th>
+    <th>Contact person email</th>
+    <th>Report compiler</th>
+    <th>Release date</th>
+    <th>Approved</th>
+    <th>Building image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inspections.each do |inspection| %>
+  <tr>
+    <td><%= inspection.project_number %></td>
+    <td><%= inspection.project_name %></td>
+    <td><%= inspection.inspection_date %></td>
+    <td><%= inspection.inspection_address_street %></td>
+    <td><%= inspection.inspection_address_number %></td>
+    <td><%= inspection.inspection_address_zipcode %></td>
+    <td><%= inspection.inspection_address_city %></td>
+    <td><%= inspection.contact_person_name %></td>
+    <td><%= inspection.contact_person_phone %></td>
+    <td><%= inspection.contact_person_email %></td>
+    <td><%= inspection.report_compiler %></td>
+    <td><%= inspection.release_date %></td>
+    <td><%= inspection.approved %></td>
+    <td><%= inspection.building_image %></td>
+    <td><%= link_to 'Show', [inspection.client, inspection] %></td>
+    <td><%= link_to 'Edit', edit_client_inspection_path(inspection.client, inspection) %></td>
+    <td><%= link_to 'Destroy', [inspection.client, inspection], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inspection', new_client_inspection_path(params[:client_id]) %>
